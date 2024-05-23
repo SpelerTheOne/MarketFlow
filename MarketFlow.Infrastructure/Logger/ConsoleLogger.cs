@@ -1,4 +1,4 @@
-﻿namespace MarketFlow
+﻿namespace MarketFlow.Infrastructure.Logger
 {
     public class ConsoleLogger : ILogger
     {

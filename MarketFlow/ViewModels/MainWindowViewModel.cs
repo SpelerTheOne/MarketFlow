@@ -1,4 +1,6 @@
-﻿namespace MarketFlow.ViewModels
+﻿using MarketFlow.Infrastructure.Logger;
+
+namespace MarketFlow.ViewModels
 {
     public class MainWindowViewModel : IDisposable
     {

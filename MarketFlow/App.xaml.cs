@@ -15,6 +15,9 @@ namespace MarketFlow
             base.OnStartup(e);
 
             ServiceProvider = AppServices.ConfigureServices();
+
+            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+            mainWindow.Show();
         }
     }
 

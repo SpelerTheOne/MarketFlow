@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MarketFlow.ViewModels;
+using System.Windows;
 
 namespace MarketFlow
 {
@@ -7,9 +8,11 @@ namespace MarketFlow
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainWindowViewModel viewModel)
         {
             InitializeComponent();
+
+            DataContext = viewModel;
         }
     }
 }
