@@ -1,6 +1,8 @@
 ﻿using MarketFlow.Client.ViewModels;
 using MarketFlow.Client.Views;
 using MarketFlow.Infrastructure.Logger;
+using MarketFlow.Infrastructure.Services;
+using MarketFlow.Infrastructure.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MarketFlow.Client
@@ -18,6 +20,7 @@ namespace MarketFlow.Client
             services.AddTransient<MainWindow>();
             services.AddTransient<MainWindowViewModel>();
             services.AddTransient<ILogger, ConsoleLogger>();
+            services.AddTransient<ILoggerService, LoggerService>();
 
             return services.BuildServiceProvider();
         }

@@ -11,7 +11,7 @@ namespace MarketFlow.Client.ViewModels
         {
             _logger = logger;
 
-            _logger.Log("MainWindow initialized");
+            //_logger.Log("MainWindow initialized");
             _logger = logger;
         }
 
