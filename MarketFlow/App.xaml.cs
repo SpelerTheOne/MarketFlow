@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MarketFlow.Client.Helper;
+using MarketFlow.Client.Views;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
-namespace MarketFlow
+namespace MarketFlow.Client
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -15,6 +17,8 @@ namespace MarketFlow
             base.OnStartup(e);
 
             ServiceProvider = AppServices.ConfigureServices();
+
+            ViewModelLocator.SetProvider(ServiceProvider);
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();

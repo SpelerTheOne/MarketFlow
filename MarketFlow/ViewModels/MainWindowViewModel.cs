@@ -1,6 +1,6 @@
 ﻿using MarketFlow.Infrastructure.Logger;
 
-namespace MarketFlow.ViewModels
+namespace MarketFlow.Client.ViewModels
 {
     public class MainWindowViewModel : IDisposable
     {

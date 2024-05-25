@@ -1,8 +1,9 @@
-﻿using MarketFlow.Infrastructure.Logger;
-using MarketFlow.ViewModels;
+﻿using MarketFlow.Client.ViewModels;
+using MarketFlow.Client.Views;
+using MarketFlow.Infrastructure.Logger;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MarketFlow
+namespace MarketFlow.Client
 {
     public static class AppServices
     {
@@ -11,11 +12,12 @@ namespace MarketFlow
             var services = new ServiceCollection();
 
             // Add logging
-            services.AddSingleton<ILogger, ConsoleLogger>();
+            //services.AddSingleton<ILogger, ConsoleLogger>();
 
             // Add other services here
             services.AddTransient<MainWindow>();
             services.AddTransient<MainWindowViewModel>();
+            services.AddTransient<ILogger, ConsoleLogger>();
 
             return services.BuildServiceProvider();
         }

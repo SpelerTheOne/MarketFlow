@@ -17,8 +17,4 @@
     <ProjectReference Include="..\MarketFlow.Infrastructure\MarketFlow.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-
 </Project>
